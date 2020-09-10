@@ -1,9 +1,6 @@
 import java.io.Serializable;
 import java.util.*;
 
-/*
-Построй дерево(1)
-*/
 public class CustomTree extends AbstractList<String> implements Cloneable, Serializable {
 
     Entry<String> root;
@@ -83,7 +80,6 @@ public class CustomTree extends AbstractList<String> implements Cloneable, Seria
                 queue.add(current.rightChild);
         }
         if (!checkCanAdd()){
-            System.out.println("На удалении " + s + " элемента, пришлось делать рефрешь");
             refresh();
         }
         return false;
